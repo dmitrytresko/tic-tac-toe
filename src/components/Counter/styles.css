@@ -1,0 +1,38 @@
+.counter {
+  width: 2.35rem;
+  height: 2.35rem;
+  position: relative;
+}
+
+.counter.x::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 1.5rem);
+  left: calc(50% - 0.275rem);
+  width: 0.55rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  background-color: #00c782;
+  transform: rotate(45deg);
+}
+
+.counter.x::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 1.5rem);
+  right: calc(50% - 0.275rem);
+  width: 0.55rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  background-color: #00c782;
+  transform: rotate(-45deg);
+}
+
+.counter.circle {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border-width: 0.5rem;
+  border-style: solid;
+  border-color: #fff;
+}

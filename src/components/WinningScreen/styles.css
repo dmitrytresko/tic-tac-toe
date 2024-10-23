@@ -1,0 +1,58 @@
+.message {
+  width: 6.25rem;
+  height: 6.25rem;
+  position: relative;
+}
+
+.message.draw::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 1.875rem);
+  width: 6.25rem;
+  height: 1.25rem;
+  border-radius: 1.5rem;
+  background-color: #fff;
+}
+
+.message.draw::after {
+  content: '';
+  position: absolute;
+  top: calc(50% + 0.625rem);
+  width: 6.25rem;
+  height: 1.25rem;
+  border-radius: 1.5rem;
+  background-color: #fff;
+}
+
+.message.x::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 4rem);
+  left: calc(50% - 0.6rem);
+  width: 1.25rem;
+  height: 8rem;
+  border-radius: 1.5rem;
+  background-color: #00C782;
+  transform: rotate(45deg);
+}
+
+.message.x::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 4rem);
+  right: calc(50% - 0.6rem);
+  width: 1.25rem;
+  height: 8rem;
+  border-radius: 1.5rem;
+  background-color: #00C782;
+  transform: rotate(-45deg);
+}
+
+.message.circle {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  border-width: 1rem;
+  border-style: solid;
+  border-color: #fff;
+}
