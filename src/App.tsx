@@ -17,7 +17,7 @@ export const pageTransition = {
   duration: 0.75,
 };
 
-function App() {
+const App = () => {
   const location = useLocation();
 
   return (
@@ -30,6 +30,6 @@ function App() {
       </Routes>
     </AnimatePresence>
   );
-}
+};
 
 export default App;

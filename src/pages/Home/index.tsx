@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { pageTransition, pageVariants } from '../../App';
-import ticTacToeLogo from '../../assets/img/tic-tac-toe-logo.png';
 import './styles.css';
+
+const ticTacToeLogo = new URL('../../assets/img/tic-tac-toe-logo.png', import.meta.url)
+  .href;
 
 const Home: React.FC = () => {
   const navigate = useNavigate();

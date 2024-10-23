@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { pageTransition, pageVariants } from '../App';
-import notFoundError from '../assets/img/404-error.png';
+
+const notFoundImg = new URL('../assets/img/not-found.png', import.meta.url).href;
 
 const NotFound: React.FC = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const NotFound: React.FC = () => {
       style={{ position: 'absolute' }}
       className="w-screen h-screen flex flex-col justify-center items-center"
     >
-      <img src={notFoundError} alt="Not Found" />
+      <img src={notFoundImg} alt="Not Found" />
       <h1 className="text-[1.725rem] text-white font-bold mb-[9.5rem]">
         Oops. The page you are searching for doesn't exist.
       </h1>
