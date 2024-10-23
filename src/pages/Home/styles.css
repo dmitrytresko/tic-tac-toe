@@ -1,0 +1,23 @@
+.title::before {
+  content: 'Tic Tac Toe';
+  position: absolute;
+  mix-blend-mode: difference;
+  filter: blur(0.175rem);
+}
+
+.title-gradient {
+  background: #1D976C;  
+  background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);  
+  background: linear-gradient(to right, #93F9B9, #1D976C); 
+}
+
+.title-lights {
+  background: radial-gradient(circle, #ffffff, #000000 35%) center / 10% 25%;
+  animation: dodge 8s linear infinite;
+}
+
+@keyframes dodge {
+  to {
+    transform: translate(50%, 50%);
+  }
+}
