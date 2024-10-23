@@ -1,3 +1,7 @@
-## Take a Look Here
+### Tic Tac Toe
 
-Visit `tic-tac-toe-git-main-dmitrytresko-projects.vercel.app` to take a look at my take on the classic game.
+Visit the following link to take a look at my take on the classic game:
+
+```
+tic-tac-toe-dmitrytresko.vercel.app
+```
