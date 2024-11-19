@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { pageTransition, pageVariants } from '../../App';
+import Button from '../../components/Button';
 import './styles.css';
 
 const ticTacToeLogo = new URL('../../assets/img/tic-tac-toe-logo.png', import.meta.url)
@@ -35,18 +36,12 @@ const Home: React.FC = () => {
         <span className="title-lights absolute top-[-100%] left-[-100%] right-0 bottom-0 mix-blend-color-dodge" />
       </div>
 
-      <button
-        className="px-4 py-4 min-w-[20rem] mb-4 rounded-full border-2 bg-[#00C782] border-[#00C782] text-white text-3xl font-bold hover:bg-[#1D976C] hover:border-[#1D976C] transition-all"
-        onClick={goToNewGame}
-      >
-        New Game
-      </button>
-      <button
-        className="px-4 py-4 min-w-[20rem] rounded-full border-2 border-white bg-transparent text-white text-3xl font-bold hover:bg-white hover:text-black transition-all"
-        onClick={goToRules}
-      >
-        Rules
-      </button>
+      <div className="flex flex-col gap-4">
+        <Button onClick={goToNewGame}>New Game</Button>
+        <Button variant="outlined" onClick={goToRules}>
+          Rules
+        </Button>
+      </div>
     </motion.div>
   );
 };

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { GameContext } from '../../contexts/GameContext';
 import { initialCells } from '../../data/cells';
 import { pageVariants, pageTransition } from '../../App';
+import Button from '../Button';
 import './styles.css';
 
 type WinningScreenProps = {
@@ -45,19 +46,11 @@ const WinningScreen: React.FC<WinningScreenProps> = ({ setEndGame }) => {
         </h1>
       </div>
 
-      <div className="flex flex-col">
-        <button
-          className="px-4 py-4 min-w-[20rem] mb-4 rounded-full border-2 bg-[#00C782] border-[#00C782] text-white text-3xl font-bold hover:bg-[#1D976C] hover:border-[#1D976C] transition-all"
-          onClick={restartGame}
-        >
-          Restart
-        </button>
-        <button
-          className="px-4 py-4 min-w-[20rem] rounded-full border-2 border-white bg-transparent text-white text-3xl font-bold hover:bg-white hover:text-black transition-all"
-          onClick={goHome}
-        >
+      <div className="flex flex-col gap-4">
+        <Button onClick={restartGame}>Restart</Button>
+        <Button variant="outlined" onClick={goHome}>
           Home
-        </button>
+        </Button>
       </div>
     </motion.div>
   );

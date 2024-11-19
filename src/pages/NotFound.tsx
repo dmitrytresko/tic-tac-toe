@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { pageTransition, pageVariants } from '../App';
+import Button from '../components/Button';
 
 const notFoundImg = new URL('../assets/img/not-found.png', import.meta.url).href;
 
@@ -22,12 +23,7 @@ const NotFound: React.FC = () => {
       <h1 className="text-[1.725rem] text-white font-bold mb-[9.5rem]">
         Oops. The page you are searching for doesn't exist.
       </h1>
-      <button
-        className="px-4 py-4 min-w-[20rem] rounded-full border-2 bg-[#00C782] border-[#00C782] text-white text-3xl font-bold hover:bg-[#1D976C] hover:border-[#1D976C] transition-all"
-        onClick={goHome}
-      >
-        Home
-      </button>
+      <Button onClick={goHome}>Home</Button>
     </motion.div>
   );
 };
